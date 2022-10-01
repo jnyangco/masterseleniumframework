@@ -2,57 +2,71 @@ package org.selenium.pom.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.selenium.pom.base.BasePage;
 import org.selenium.pom.objects.BillingAddress;
 import org.selenium.pom.objects.User;
 
 public class CheckoutPage extends BasePage {
-    private final By firstName = By.id("billing_first_name");
-    private final By lastName = By.id("billing_last_name");
-    private final By addressLineOne = By.id("billing_address_1");
-    private final By city = By.id("billing_city");
-    private final By postCode = By.id("billing_postcode");
-    private final By email = By.cssSelector("#billing_email");
+    private final By firstNameFld = By.id("billing_first_name");
+    private final By lastNameFld = By.id("billing_last_name");
+    private final By addressLineOneFld = By.id("billing_address_1");
+    private final By billingCityFld = By.id("billing_city");
+    private final By billingPostCodeFld = By.id("billing_postcode");
+    private final By billingEmailFld = By.cssSelector("#billing_email");
 
     private final By placeOrderBtn = By.xpath("//button[@id='place_order']");
-    private final By successMessage = By.cssSelector(".woocommerce-notice");
-    private final By showLoginBtn = By.cssSelector(".showlogin");
-    private final By usernameTxt = By.cssSelector("#username");
-    private final By passwordTxt = By.cssSelector("#password");
+    private final By successNotice = By.cssSelector(".woocommerce-notice");
+    private final By clickHereToLoginLink = By.cssSelector(".showlogin");
+    private final By usernameFld = By.cssSelector("#username");
+    private final By passwordFld = By.cssSelector("#password");
     private final By loginBtn = By.xpath("//button[@name='login']");
+    private final By overlay = By.cssSelector(".blockUI.blockOverlay");
+
 
     public CheckoutPage(WebDriver driver) {
         super(driver);
     }
 
     public void enterFirstName(String text) {
-        driver.findElement(firstName).clear();
-        driver.findElement(firstName).sendKeys(text);
+        //WebElement element = waitForElementToBeVisible(firstNameFld);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(firstNameFld));
+        element.clear();
+        element.sendKeys(text);
+        //driver.findElement(firstNameFld).clear();
+        //driver.findElement(firstNameFld).sendKeys(text);
     }
 
     public void enterLastName(String text) {
-        driver.findElement(lastName).clear();
-        driver.findElement(lastName).sendKeys(text);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(lastNameFld));
+        element.clear();
+        element.sendKeys(text);
+
     }
 
     public void enterAddressLineOne(String text) {
-        driver.findElement(addressLineOne).clear();
-        driver.findElement(addressLineOne).sendKeys(text);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(addressLineOneFld));
+        element.clear();
+        element.sendKeys(text);
     }
 
     public void enterCity(String text) {
-        driver.findElement(city).clear();
-        driver.findElement(city).sendKeys(text);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(billingCityFld));
+        element.clear();
+        element.sendKeys(text);
     }
 
     public void enterPostCode(String text) {
-        driver.findElement(postCode).clear();
-        driver.findElement(postCode).sendKeys(text);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(billingPostCodeFld));
+        element.clear();
+        element.sendKeys(text);
     }
 
     public void enterEmail(String text) {
-        driver.findElement(email).clear();
-        driver.findElement(email).sendKeys(text);
+        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(billingEmailFld));
+        element.clear();
+        element.sendKeys(text);
     }
 
     public CheckoutPage setBillingAddress(BillingAddress billingAddress) {
@@ -66,32 +80,33 @@ public class CheckoutPage extends BasePage {
     }
 
     public void placeOrder() {
-        driver.findElement(placeOrderBtn).click();
+        waitForOverlaysToDisapper(overlay);
+        driver.findElement(placeOrderBtn).click(); //note: you can just use findElement directly if you think it is not needed
     }
 
-    public String getSuccessMessage() {
-        return driver.findElement(successMessage).getText();
+    public String getSuccessNotice() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(successNotice)).getText();
     }
 
     public void clickHereToLoginLink() {
-        driver.findElement(showLoginBtn).click();
+        wait.until(ExpectedConditions.elementToBeClickable(clickHereToLoginLink)).click();
     }
 
-    public void enterUsernameTxt(String text) {
-        driver.findElement(usernameTxt).sendKeys(text);
+    public void enterUsername(String text) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(usernameFld)).sendKeys(text);
     }
 
-    public void enterPasswordTxt(String text) {
-        driver.findElement(passwordTxt).sendKeys(text);
+    public void enterPassword(String text) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(passwordFld)).sendKeys(text);
     }
 
     public void clickLoginBtn() {
-        driver.findElement(loginBtn).click();
+        wait.until(ExpectedConditions.elementToBeClickable(loginBtn)).click();
     }
 
     public void login(User user) {
-        enterUsernameTxt(user.getUsername());
-        enterPasswordTxt(user.getPassword());
+        enterUsername(user.getUsername());
+        enterPassword(user.getPassword());
         clickLoginBtn();
     }
 

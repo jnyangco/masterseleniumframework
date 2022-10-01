@@ -2,6 +2,7 @@ package org.selenium.pom.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.selenium.pom.base.BasePage;
 
 public class StorePage extends BasePage {
@@ -16,7 +17,7 @@ public class StorePage extends BasePage {
     }
 
     private void enterTextInSearchFld(String text) {
-        driver.findElement(searchFld).sendKeys(text);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(searchFld)).sendKeys(text);
     }
 
     //Builder Pattern Format - apply if action is in the same page -> we can chain the methods in the test case
@@ -27,7 +28,7 @@ public class StorePage extends BasePage {
 //    }
 
     private void clickSearchBtn() {
-        driver.findElement(searchBtn).click();
+        wait.until(ExpectedConditions.elementToBeClickable(searchBtn)).click();
     }
 
     public void search(String text) {
@@ -36,7 +37,7 @@ public class StorePage extends BasePage {
     }
 
     public String getTitle() {
-        return driver.findElement(title).getText();
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(title)).getText();
     }
 
     private By getAddToCartBtnElement(String productName) {
@@ -45,11 +46,11 @@ public class StorePage extends BasePage {
 
     public void clickAddToCartBtn(String productName) {
         By addToCartBtn = getAddToCartBtnElement(productName);
-        driver.findElement(addToCartBtn).click();
+        wait.until(ExpectedConditions.elementToBeClickable(addToCartBtn)).click();
     }
 
     public void clickViewCart() {
-        driver.findElement(viewCartLink).click();
+        wait.until(ExpectedConditions.elementToBeClickable(viewCartLink)).click();
     }
 
 

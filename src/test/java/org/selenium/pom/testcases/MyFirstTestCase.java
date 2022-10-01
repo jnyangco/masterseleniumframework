@@ -18,7 +18,7 @@ public class MyFirstTestCase extends BaseTest {
 
     @Test
     public void guestCheckoutUsingDirectBankTransfer() throws InterruptedException, IOException {
-        /*BillingAddress billingAddress = new BillingAddress();
+        /* BillingAddress billingAddress = new BillingAddress();
         billingAddress.
                 setFirstName("demo").
                 setLastName("user").
@@ -35,26 +35,22 @@ public class MyFirstTestCase extends BaseTest {
         System.out.println("Start >> Homepage");
         HomePage homePage = new HomePage(driver);
         homePage.load();
-       //click storeMenuLink + return StorePage object
+        //click storeMenuLink + return StorePage object
         //note: since clickStoreMenuLink return the object of the StorePage
         //we do not need to create an instance of the StorePage (i.e: StorePage storePage = new StorePage(driver);)
 
         System.out.println("Start >> StorePage");
         StorePage storePage = homePage.navigateToStoreUsingMenu();
-        Thread.sleep(2000);
         storePage.search(searchFor);
         Thread.sleep(2000);
-        Assert.assertEquals(storePage.getTitle(), "Search results: “" +searchFor+ "”");
+        Assert.assertEquals(storePage.getTitle(), "Search results: “" + searchFor + "”");
         storePage.clickAddToCartBtn(product.getName());
-        Thread.sleep(2000);
         storePage.clickViewCart();
-        Thread.sleep(2000);
 
         System.out.println("Start >> CartPage");
         CartPage cartPage = new CartPage(driver);
         Assert.assertEquals(cartPage.getProductName(), product.getName());
         cartPage.clickCheckoutBtn();
-        Thread.sleep(2000);
 
         System.out.println("Start >> CheckoutPage");
         CheckoutPage checkoutPage = new CheckoutPage(driver);
@@ -66,8 +62,7 @@ public class MyFirstTestCase extends BaseTest {
         checkoutPage.enterPostCode("94188");
         checkoutPage.enterEmail("askcomdch1@yopmail.com");*/
         checkoutPage.placeOrder();
-        Thread.sleep(4000);
-        Assert.assertEquals(checkoutPage.getSuccessMessage(), "Thank you. Your order has been received.");
+        Assert.assertEquals(checkoutPage.getSuccessNotice(), "Thank you. Your order has been received.");
     }
 
     @Test
@@ -75,7 +70,7 @@ public class MyFirstTestCase extends BaseTest {
         String searchFor = "Blue";
         BillingAddress billingAddress = JacksonUtils.deserializeJson("myBillingAddress.json", BillingAddress.class);
         Product product = new Product(1215);
-        User user = new User("askcomdch1@yopmail.com", "Passsword@1234");
+        User user = new User("askcomdch1@yopmail.com", "Password@1234");
 
         System.out.println("Start >> Homepage");
         HomePage homePage = new HomePage(driver);
@@ -83,99 +78,26 @@ public class MyFirstTestCase extends BaseTest {
 
         System.out.println("Start >> StorePage");
         StorePage storePage = homePage.navigateToStoreUsingMenu();
-        Thread.sleep(2000);
         storePage.search(searchFor);
         Thread.sleep(2000);
-        Assert.assertEquals(storePage.getTitle(), "Search results: “" +searchFor+ "”");
+        Assert.assertEquals(storePage.getTitle(), "Search results: “" + searchFor + "”");
         storePage.clickAddToCartBtn(product.getName());
-        Thread.sleep(2000);
         storePage.clickViewCart();
-        Thread.sleep(2000);
 
         System.out.println("Start >> CartPage");
         CartPage cartPage = new CartPage(driver);
         Assert.assertEquals(cartPage.getProductName(), product.getName());
         cartPage.clickCheckoutBtn();
-        Thread.sleep(2000);
 
         System.out.println("Start >> CheckoutPage");
         CheckoutPage checkoutPage = new CheckoutPage(driver);
         checkoutPage.clickHereToLoginLink();
-        Thread.sleep(2000);
 
         checkoutPage.login(user);
-        Thread.sleep(2000);
-
         checkoutPage.setBillingAddress(billingAddress);
         checkoutPage.placeOrder();
-        Thread.sleep(4000);
-        Assert.assertEquals(checkoutPage.getSuccessMessage(), "Thank you. Your order has been received.");
+        Assert.assertEquals(checkoutPage.getSuccessNotice(), "Thank you. Your order has been received.");
 
-
-
-
-//        **********************************************
-        /*
-        System.out.println("Start >> CheckoutPage");
-        CheckoutPage checkoutPage = new CheckoutPage(driver);
-        checkoutPage.clickHereToLoginLink();
-        Thread.sleep(2000);
-        checkoutPage.login("askcomdch1@yopmail.com", "Password@1234");
-        Thread.sleep(2000);
-
-
-
-
-
-
-
-
-
-
-
-
-        System.out.println("Start >> Homepage");
-        HomePage homePage = new HomePage(driver);
-        //click storeMenuLink + return StorePage object
-        //note: since clickStoreMenuLink return the object of the StorePage
-        //we do not need to create an instance of the StorePage (i.e: StorePage storePage = new StorePage(driver);)
-
-        System.out.println("Start >> StorePage");
-        StorePage storePage = homePage.navigateToStoreUsingMenu();
-        Thread.sleep(2000);
-        storePage.search("Blue");
-        Thread.sleep(2000);
-        Assert.assertEquals(storePage.getTitle(), "Search results: “Blue”");
-        storePage.clickAddToCartBtn("Blue Shoes");
-        Thread.sleep(2000);
-        storePage.clickViewCart();
-        Thread.sleep(2000);
-
-        System.out.println("Start >> CartPage");
-        CartPage cartPage = new CartPage(driver);
-        Assert.assertEquals(cartPage.getProductName(), "Blue Shoes");
-        cartPage.clickCheckoutBtn();
-        Thread.sleep(2000);
-
-        System.out.println("Start >> CheckoutPage");
-        CheckoutPage checkoutPage = new CheckoutPage(driver);
-        checkoutPage.clickHereToLoginLink();
-        Thread.sleep(2000);
-        checkoutPage.login("askcomdch1@yopmail.com", "Password@1234");
-        Thread.sleep(2000);
-
-        checkoutPage.enterFirstName("demo");
-        checkoutPage.enterLastName("user");
-        checkoutPage.enterAddressLineOne("San Francisco");
-        checkoutPage.enterCity("San Francisco");
-        checkoutPage.enterPostCode("94188");
-        checkoutPage.enterEmail("askcomdch1@yopmail.com");
-        checkoutPage.placeOrder();
-        Thread.sleep(4000);
-        Assert.assertEquals(checkoutPage.getSuccessMessage(), "Thank you. Your order has been received.");
-
-        driver.findElement(By.id("Test")).clear();
-         */
     }
 
 }
