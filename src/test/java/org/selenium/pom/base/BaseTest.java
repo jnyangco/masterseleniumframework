@@ -10,13 +10,14 @@ public class BaseTest {
 
     @BeforeTest
     public void startDriver() {
+        System.out.println(System.getProperty("user.dir")+"\\src\\test\\java\\org\\selenium\\pom\\drivers");
         driver = new DriverManager().initializeDriver();
 
     }
 
     @AfterTest
     public void quitDriver() {
-//        driver.quit();
+        driver.quit();
     }
 
 
