@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="caa02dc5-34f0-4ed1-b6f3-473b96440b9b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/objects/BillingAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/objects/BillingAddress.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/pages/CheckoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/testcases/MyFirstTestCase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/login.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/myBillingAddress.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/myBillingAddress.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/testcases/TestCase1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/testcases/TestCase1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +59,7 @@
       <recent name="org.selenium.pom.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TestCase1.loginAndCheckoutUsingDirectBankTransfer">
+  <component name="RunManager" selected="TestNG.TestCase1">
     <configuration name="MyFirstTestCase" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MasterSeleniumFramework" />
       <extension name="coverage">
@@ -171,9 +168,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestCase1" />
         <item itemvalue="TestNG.TestCase1.loginAndCheckoutUsingDirectBankTransfer" />
         <item itemvalue="TestNG.TestCase1.guestCheckoutUsingDirectBankTransfer" />
-        <item itemvalue="TestNG.TestCase1" />
         <item itemvalue="TestNG.MyFirstTestCase" />
         <item itemvalue="TestNG.MyFirstTestCase.loginAndCheckoutUsingDirectBankTransfer" />
       </list>

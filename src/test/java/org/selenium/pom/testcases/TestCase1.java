@@ -61,7 +61,7 @@ public class TestCase1 extends BaseTest {
         checkoutPage.enterCity("San Francisco");
         checkoutPage.enterPostCode("94188");
         checkoutPage.enterEmail("askcomdch1@yopmail.com");*/
-//        checkoutPage.selectDirectBankTransfer();
+        checkoutPage.selectDirectBankTransfer();
         checkoutPage.placeOrder();
         Assert.assertEquals(checkoutPage.getSuccessNotice(), "Thank you. Your order has been received.");
     }
@@ -95,7 +95,7 @@ public class TestCase1 extends BaseTest {
         checkoutPage.clickHereToLoginLink();
         checkoutPage.login(user);
         checkoutPage.setBillingAddress(billingAddress);
-//        checkoutPage.selectDirectBankTransfer();
+        checkoutPage.selectDirectBankTransfer();
         checkoutPage.placeOrder();
         Assert.assertEquals(checkoutPage.getSuccessNotice(), "Thank you. Your order has been received.");
 
