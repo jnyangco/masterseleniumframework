@@ -98,7 +98,9 @@ public class TestCase1 extends BaseTest {
         checkoutPage.selectDirectBankTransfer();
         checkoutPage.placeOrder();
         Assert.assertEquals(checkoutPage.getSuccessNotice(), "Thank you. Your order has been received.");
-
+        
+        checkoutPage.placeOrder();
+        
     }
 
 }
