@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class MyFirstTestCase extends BaseTest {
+public class TestCase1 extends BaseTest {
 
     @Test
     public void guestCheckoutUsingDirectBankTransfer() throws InterruptedException, IOException {
@@ -61,6 +61,7 @@ public class MyFirstTestCase extends BaseTest {
         checkoutPage.enterCity("San Francisco");
         checkoutPage.enterPostCode("94188");
         checkoutPage.enterEmail("askcomdch1@yopmail.com");*/
+//        checkoutPage.selectDirectBankTransfer();
         checkoutPage.placeOrder();
         Assert.assertEquals(checkoutPage.getSuccessNotice(), "Thank you. Your order has been received.");
     }
@@ -92,9 +93,9 @@ public class MyFirstTestCase extends BaseTest {
         System.out.println("Start >> CheckoutPage");
         CheckoutPage checkoutPage = new CheckoutPage(driver);
         checkoutPage.clickHereToLoginLink();
-
         checkoutPage.login(user);
         checkoutPage.setBillingAddress(billingAddress);
+//        checkoutPage.selectDirectBankTransfer();
         checkoutPage.placeOrder();
         Assert.assertEquals(checkoutPage.getSuccessNotice(), "Thank you. Your order has been received.");
 

@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.selenium.pom.base.BasePage;
 import org.selenium.pom.objects.BillingAddress;
 import org.selenium.pom.objects.User;
@@ -24,6 +25,10 @@ public class CheckoutPage extends BasePage {
     private final By loginBtn = By.xpath("//button[@name='login']");
     private final By overlay = By.cssSelector(".blockUI.blockOverlay");
 
+    private final By countryDropdown = By.id("billing_country");
+    private final By stateDropdown = By.id("billing_state");
+//    private final By overlay = By.cssSelector(".blockUI.blockOverlay");
+
 
     public CheckoutPage(WebDriver driver) {
         super(driver);
@@ -42,7 +47,16 @@ public class CheckoutPage extends BasePage {
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(lastNameFld));
         element.clear();
         element.sendKeys(text);
+    }
 
+    public void selectCountry(String countryName) {
+        Select select = new Select(driver.findElement(countryDropdown));
+        select.selectByVisibleText(countryName);
+    }
+
+    public void selectState(String stateName) {
+        Select select = new Select(driver.findElement(stateDropdown));
+        select.selectByVisibleText(stateName);
     }
 
     public void enterAddressLineOne(String text) {
@@ -72,8 +86,10 @@ public class CheckoutPage extends BasePage {
     public CheckoutPage setBillingAddress(BillingAddress billingAddress) {
         enterFirstName(billingAddress.getFirstName());
         enterLastName(billingAddress.getLastName());
+        selectCountry(billingAddress.getCountry());
         enterAddressLineOne(billingAddress.getAddressLineOne());
         enterCity(billingAddress.getCity());
+        selectState(billingAddress.getState());
         enterPostCode(billingAddress.getPostalCode());
         enterEmail(billingAddress.getEmail());
         return this;
