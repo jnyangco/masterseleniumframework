@@ -12,8 +12,8 @@ import java.util.List;
 public class BasePage {
     protected WebDriver driver;
     protected WebDriverWait wait;
-    protected WebDriverWait waitLong;
-    protected WebDriverWait waitShort;
+//    protected WebDriverWait waitLong;
+//    protected WebDriverWait waitShort;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
