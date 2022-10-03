@@ -18,6 +18,7 @@ public class MyFirstTestCase extends BaseTest {
 
     @Test
     public void guestCheckoutUsingDirectBankTransfer() throws InterruptedException, IOException {
+        System.out.println("============================================");
         /* BillingAddress billingAddress = new BillingAddress();
         billingAddress.
                 setFirstName("demo").
@@ -70,6 +71,7 @@ public class MyFirstTestCase extends BaseTest {
 
     @Test
     public void loginAndCheckoutUsingDirectBankTransfer() throws InterruptedException, IOException {
+        System.out.println("============================================");
         String searchFor = "Blue";
         BillingAddress billingAddress = JacksonUtils.deserializeJson("myBillingAddress.json", BillingAddress.class);
         Product product = new Product(1215);
