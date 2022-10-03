@@ -21,5 +21,6 @@ public class HomePage extends BasePage {
     public StorePage navigateToStoreUsingMenu() {
         wait.until(ExpectedConditions.elementToBeClickable(storeMenuLink)).click();
         return new StorePage(driver);
+
     }
 }
