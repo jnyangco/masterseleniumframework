@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caa02dc5-34f0-4ed1-b6f3-473b96440b9b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/constants/BrowserType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/base/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/base/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/drivers/resolution.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/drivers/resolution.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/factory/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/factory/DriverManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/testcases/TestCase1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/tests/MyFirstTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/pages/CheckoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/tests/MyFirstTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/tests/MyFirstTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -64,7 +64,7 @@
       <recent name="org.selenium.pom.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.MyFirstTestCase (1)">
+  <component name="RunManager" selected="TestNG.MyFirstTestCase.guestCheckoutUsingDirectBankTransfer">
     <configuration name="C:/Selenium/MasterSeleniumFramework/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MasterSeleniumFramework" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
@@ -146,16 +146,26 @@
     </configuration>
     <configuration name="MyFirstTestCase.guestCheckoutUsingDirectBankTransfer" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MasterSeleniumFramework" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.selenium.pom.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.selenium.pom.testcases" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="org.selenium.pom.tests" />
       <option name="MAIN_CLASS_NAME" value="org.selenium.pom.tests.MyFirstTestCase" />
       <option name="METHOD_NAME" value="guestCheckoutUsingDirectBankTransfer" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -198,10 +208,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="TestNG.MyFirstTestCase.guestCheckoutUsingDirectBank" />
+      <item itemvalue="TestNG.C:/Selenium/MasterSeleniumFramework/testng.xml" />
+      <item itemvalue="TestNG.MyFirstTestCase" />
+      <item itemvalue="TestNG.MyFirstTestCase.guestCheckoutUsingDirectBankTransfer" />
+      <item itemvalue="TestNG.MyFirstTestCase.loginAndCheckoutUsingDirectBankTransfer" />
+      <item itemvalue="TestNG.MyFirstTestCase (1)" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.MyFirstTestCase (1)" />
         <item itemvalue="TestNG.MyFirstTestCase.guestCheckoutUsingDirectBankTransfer" />
+        <item itemvalue="TestNG.MyFirstTestCase (1)" />
         <item itemvalue="TestNG.C:/Selenium/MasterSeleniumFramework/testng.xml" />
         <item itemvalue="TestNG.MyFirstTestCase" />
         <item itemvalue="TestNG.MyFirstTestCase.loginAndCheckoutUsingDirectBankTransfer" />
