@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caa02dc5-34f0-4ed1-b6f3-473b96440b9b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/constants/BrowserType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testng2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/base/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/drivers/resolution.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/drivers/resolution.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/factory/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/factory/DriverManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/pages/CheckoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/tests/MyFirstTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/tests/MyFirstTestCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,23 +47,23 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.selenium.pom.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.MyFirstTestCase.guestCheckoutUsingDirectBankTransfer">
+  <component name="RunManager" selected="TestNG.C:/Selenium/MasterSeleniumFramework/testng.xml">
     <configuration name="C:/Selenium/MasterSeleniumFramework/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MasterSeleniumFramework" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
@@ -218,9 +217,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.C:/Selenium/MasterSeleniumFramework/testng.xml" />
         <item itemvalue="TestNG.MyFirstTestCase.guestCheckoutUsingDirectBankTransfer" />
         <item itemvalue="TestNG.MyFirstTestCase (1)" />
-        <item itemvalue="TestNG.C:/Selenium/MasterSeleniumFramework/testng.xml" />
         <item itemvalue="TestNG.MyFirstTestCase" />
         <item itemvalue="TestNG.MyFirstTestCase.loginAndCheckoutUsingDirectBankTransfer" />
       </list>
