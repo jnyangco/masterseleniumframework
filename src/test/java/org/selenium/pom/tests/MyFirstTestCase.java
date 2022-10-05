@@ -69,7 +69,7 @@ public class MyFirstTestCase extends BaseTest {
     }
 
 
-    @Test
+//    @Test
     public void loginAndCheckoutUsingDirectBankTransfer() throws InterruptedException, IOException {
         System.out.println("============================================");
         String searchFor = "Blue";
