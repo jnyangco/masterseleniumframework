@@ -1,0 +1,27 @@
+
+---------------------------------------------------------------------------------
+RUN Maven Command with multiple testng.xml
+<configuration>
+    <suiteXmlFiles>
+        <suiteXmlFile>testng1.xml</suiteXmlFile>
+        <suiteXmlFile>testng2.xml</suiteXmlFile>
+    </suiteXmlFiles>
+</configuration>
+
+---------------------------------------------------------------------------------
+RUN Maven Command with Path
+mvn run -> mvn clean test -Dsurefire.suiteXmlFiles=testng1.xml, testng2.xml
+note: disable the <configuration> and <suiteXmlFile> in pom.xml
+
+---------------------------------------------------------------------------------
+Maven Parameterized
+<properties>
+    <suiteFile>testng.xml</suiteFile>
+</properties>
+
+<suiteXmlFiles>
+    <suiteXmlFile>${suiteFile}</suiteXmlFile>
+</suiteXmlFiles>
+
+mvn run -> mvn clean test -DsuiteFile=testng_ff.xml
+-> this will run testng_ff.xml, if not included it will run the default (testng.xml)
