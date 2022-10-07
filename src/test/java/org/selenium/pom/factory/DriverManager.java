@@ -17,14 +17,6 @@ public class DriverManager {
         WebDriver driver;
         //String browser = System.getProperty("browser", "CHROME");//if null - set default to CHROME
 
-//        String localBrowser;
-//        localBrowser = System.getProperty("browser");//maven
-//        localBrowser = browser;//testng.xml
-
-        //1-maven, 2-testng (maven=null) then get from testng.xml, 3-from config file (so you can run by right-clicking on method name)
-        //Usage: 1-maven only -> CICD, 2-testng.xml only, 3-maven with testng.xml
-        browser = System.getProperty("browser", browser);
-
         //switch (browser.toLowerCase()) { }
         switch (BrowserType.valueOf(browser)) { //converting browser string to enum constants
             case CHROME:

@@ -25,3 +25,29 @@ Maven Parameterized
 
 mvn run -> mvn clean test -DsuiteFile=testng_ff.xml
 -> this will run testng_ff.xml, if not included it will run the default (testng.xml)
+
+---------------------------------------------------------------------------------
+TestNG
+Run Parallel - 1 Browser
+<Suite> parallel="methods"
+<test> empty
+
+Run Parallel - 2 Browsers
+<Suite> parallel="tests" thread-count="8"
+<test> parallel="methods" thread-count="8"
+
+
+others:
+parallel="classes"
+parallel="instances"
+
+---------------------------------------------------------------------------------
+Git terminal commands
+
+git --version
+
+git config --global user.name "username"
+git config --global user.email "email@test.com"
+
+git config --global user.name
+git config --global user.email

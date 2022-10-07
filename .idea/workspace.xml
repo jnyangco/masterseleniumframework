@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caa02dc5-34f0-4ed1-b6f3-473b96440b9b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/testng2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testng_parallel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/base/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/drivers/resolution.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/drivers/resolution.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/factory/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/factory/DriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/selenium/pom/tests/MyFirstTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/selenium/pom/tests/MyFirstTestCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +38,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2EstnwAIayz3uEXEuvreYgMqNRY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -52,6 +55,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Automation Repo/masterseleniumframework",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -62,29 +66,72 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.selenium.pom.pages" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Automation Repo\masterseleniumframework" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Selenium/MasterSeleniumFramework/testng.xml">
-    <configuration name="C:/Selenium/MasterSeleniumFramework/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MasterSeleniumFramework" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+  <component name="RunManager" selected="TestNG.C:/Automation Repo/masterseleniumframework/testng_parallel.xml (1)">
+    <configuration name="C:/Automation Repo/masterseleniumframework/testng_parallel.xml (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="masterseleniumframework" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_parallel.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="SUITE" />
+      <option name="VM_PARAMETERS" value="-ea " />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyFirstTestCase (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MasterSeleniumFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.selenium.pom.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.selenium.pom.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.selenium.pom.tests.MyFirstTestCase" />
-      <option name="TEST_OBJECT" value="CLASS" />
+    <configuration name="C:/Automation Repo/masterseleniumframework/testng_parallel.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="masterseleniumframework" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_parallel.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="VM_PARAMETERS" value="-ea -Dbrowser=CHROME" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Automation Repo/masterseleniumframework/testng_parallel.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="masterseleniumframework" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng_parallel.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -92,16 +139,27 @@
       </method>
     </configuration>
     <configuration name="MyFirstTestCase" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MasterSeleniumFramework" />
+      <module name="masterseleniumframework" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.selenium.pom.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.selenium" />
-      <option name="MAIN_CLASS_NAME" value="org.selenium.pom.testcases.MyFirstTestCase" />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="org.selenium.pom.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.selenium.pom.tests.MyFirstTestCase" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea -Dbrowser=CHROME" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -143,8 +201,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyFirstTestCase.guestCheckoutUsingDirectBankTransfer (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="masterseleniumframework" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.selenium.pom.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="org.selenium.pom.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.selenium.pom.tests.MyFirstTestCase" />
+      <option name="METHOD_NAME" value="guestCheckoutUsingDirectBankTransfer" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea -Dbrowser=CHROME" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyFirstTestCase.guestCheckoutUsingDirectBankTransfer" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MasterSeleniumFramework" />
+      <module name="masterseleniumframework" />
       <shortenClasspath name="NONE" />
       <useClassPathOnly />
       <extension name="coverage">
@@ -180,24 +267,6 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.selenium.pom.testcases" />
-      <option name="MAIN_CLASS_NAME" value="org.selenium.pom.testcases.MyFirstTestCase" />
-      <option name="METHOD_NAME" value="loginAndCheckoutUsingDirectBankTransfer" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyFirstTestCase.loginAndCheckoutUsingDirectBankTransfer" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MasterSeleniumFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.selenium.pom.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.selenium.pom.testcases" />
       <option name="MAIN_CLASS_NAME" value="org.selenium.pom.tests.MyFirstTestCase" />
       <option name="METHOD_NAME" value="loginAndCheckoutUsingDirectBankTransfer" />
       <option name="TEST_OBJECT" value="METHOD" />
@@ -207,21 +276,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="TestNG">
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea " />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="TestNG.MyFirstTestCase.guestCheckoutUsingDirectBank" />
-      <item itemvalue="TestNG.C:/Selenium/MasterSeleniumFramework/testng.xml" />
+      <item itemvalue="TestNG.C:/Automation Repo/masterseleniumframework/testng_parallel.xml (1)" />
+      <item itemvalue="TestNG.C:/Automation Repo/masterseleniumframework/testng_parallel.xml" />
       <item itemvalue="TestNG.MyFirstTestCase" />
       <item itemvalue="TestNG.MyFirstTestCase.guestCheckoutUsingDirectBankTransfer" />
-      <item itemvalue="TestNG.MyFirstTestCase.loginAndCheckoutUsingDirectBankTransfer" />
-      <item itemvalue="TestNG.MyFirstTestCase (1)" />
+      <item itemvalue="TestNG.MyFirstTestCase.guestCheckoutUsingDirectBankTransfer (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Selenium/MasterSeleniumFramework/testng.xml" />
-        <item itemvalue="TestNG.MyFirstTestCase.guestCheckoutUsingDirectBankTransfer" />
-        <item itemvalue="TestNG.MyFirstTestCase (1)" />
+        <item itemvalue="TestNG.C:/Automation Repo/masterseleniumframework/testng_parallel.xml (1)" />
+        <item itemvalue="TestNG.C:/Automation Repo/masterseleniumframework/testng_parallel.xml (1)" />
+        <item itemvalue="TestNG.C:/Automation Repo/masterseleniumframework/testng_parallel.xml" />
         <item itemvalue="TestNG.MyFirstTestCase" />
-        <item itemvalue="TestNG.MyFirstTestCase.loginAndCheckoutUsingDirectBankTransfer" />
+        <item itemvalue="TestNG.MyFirstTestCase.guestCheckoutUsingDirectBankTransfer (1)" />
       </list>
     </recent_temporary>
   </component>
