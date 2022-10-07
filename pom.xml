@@ -38,7 +38,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.4.0</version>
+            <version>7.3.0</version>
             <scope>test</scope>
         </dependency>
 
@@ -67,11 +67,26 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M5</version>
                 <configuration>
+
+                    <!--Maven Run Parallel without testng.xml -->
+<!--                    <parallel>methods</parallel>-->
+<!--                    <threadCount>2</threadCount>-->
+
+                    <!--Maven Run pointing to testng.xml -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>testng_parallel.xml</suiteXmlFile>
                     </suiteXmlFiles>
+
+                    <!--Variables -->
+<!--                    <systemPropertyVariables>-->
+<!--                        <envi>${env.USER}</envi>-->
+<!--                        <browser>${browser.USER}</browser>-->
+<!--                        <testsuite>${suite.USER}</testsuite>-->
+<!--                    </systemPropertyVariables>-->
                 </configuration>
             </plugin>
+
+
         </plugins>
     </build>
 

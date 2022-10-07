@@ -34,7 +34,7 @@ public class MyFirstTestCase extends BaseTest {
         BillingAddress billingAddress = JacksonUtils.deserializeJson("myBillingAddress.json", BillingAddress.class);
         Product product = new Product(1215);
         System.out.println("Start >> Homepage");
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage(getDriver());
         homePage.load();
         //click storeMenuLink + return StorePage object
         //note: since clickStoreMenuLink return the object of the StorePage
@@ -50,12 +50,12 @@ public class MyFirstTestCase extends BaseTest {
         storePage.clickViewCart();
 
         System.out.println("Start >> CartPage");
-        CartPage cartPage = new CartPage(driver);
+        CartPage cartPage = new CartPage(getDriver());
         Assert.assertEquals(cartPage.getProductName(), product.getName());
         cartPage.clickCheckoutBtn();
 
         System.out.println("Start >> CheckoutPage");
-        CheckoutPage checkoutPage = new CheckoutPage(driver);
+        CheckoutPage checkoutPage = new CheckoutPage(getDriver());
         checkoutPage.setBillingAddress(billingAddress);
         /*checkoutPage.enterFirstName("demo");
         checkoutPage.enterLastName("user");
@@ -69,7 +69,7 @@ public class MyFirstTestCase extends BaseTest {
     }
 
 
-//    @Test
+    @Test
     public void loginAndCheckoutUsingDirectBankTransfer() throws InterruptedException, IOException {
         System.out.println("============================================");
         String searchFor = "Blue";
@@ -78,7 +78,7 @@ public class MyFirstTestCase extends BaseTest {
         User user = new User("askcomdch1@yopmail.com", "Password@1234");
 
         System.out.println("Start >> Homepage");
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage(getDriver());
         homePage.load();
 
         System.out.println("Start >> StorePage");
@@ -91,12 +91,12 @@ public class MyFirstTestCase extends BaseTest {
         storePage.clickViewCart();
 
         System.out.println("Start >> CartPage");
-        CartPage cartPage = new CartPage(driver);
+        CartPage cartPage = new CartPage(getDriver());
         Assert.assertEquals(cartPage.getProductName(), product.getName());
         cartPage.clickCheckoutBtn();
 
         System.out.println("Start >> CheckoutPage");
-        CheckoutPage checkoutPage = new CheckoutPage(driver);
+        CheckoutPage checkoutPage = new CheckoutPage(getDriver());
         checkoutPage.clickHereToLoginLink();
         checkoutPage.login(user);
         checkoutPage.setBillingAddress(billingAddress);

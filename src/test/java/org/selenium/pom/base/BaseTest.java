@@ -2,22 +2,38 @@ package org.selenium.pom.base;
 
 import org.openqa.selenium.WebDriver;
 import org.selenium.pom.factory.DriverManager;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 public class BaseTest {
-    protected WebDriver driver;
+    //protected WebDriver driver;
+    private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    @Parameters("browser")
-    @BeforeTest
-    public void startDriver(String browser) {
-        driver = new DriverManager().initializeDriver(browser);
+    //Getter and Setter
+    private void setDriver(WebDriver driver) {
+        this.driver.set(driver);
     }
 
-    @AfterTest
+    protected WebDriver getDriver() {
+        return this.driver.get();
+    }
+
+    @Parameters("browser")
+    @BeforeMethod
+    public void startDriver(String browser) {
+        browser = System.getProperty("browser", browser);
+        //1-maven, 2-testng (if maven=null) then get from testng.xml, 3-from config file (so you can run by right-clicking on method name)
+        //Usage: 1-maven only -> CICD, 2-testng.xml only, 3-maven with testng.xml
+
+        //driver = new DriverManager().initializeDriver(browser);
+        setDriver(new DriverManager().initializeDriver(browser));
+        System.out.println("CURRENT THREAD: " +Thread.currentThread().getId() +", " +"DRIVER = " +getDriver());
+    }
+
+    @AfterMethod
     public void quitDriver() {
-        driver.quit();
+        //driver.quit();
+        System.out.println("CURRENT THREAD: " +Thread.currentThread().getId() +", " +"DRIVER = " +getDriver());
+        getDriver().quit();
     }
 
 
