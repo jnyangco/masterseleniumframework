@@ -8,6 +8,7 @@ import org.selenium.pom.pages.CartPage;
 import org.selenium.pom.pages.CheckoutPage;
 import org.selenium.pom.pages.HomePage;
 import org.selenium.pom.pages.StorePage;
+import org.selenium.pom.utils.ConfigLoader;
 import org.selenium.pom.utils.JacksonUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -75,7 +76,7 @@ public class MyFirstTestCase extends BaseTest {
         String searchFor = "Blue";
         BillingAddress billingAddress = JacksonUtils.deserializeJson("myBillingAddress.json", BillingAddress.class);
         Product product = new Product(1215);
-        User user = new User("askcomdch1@yopmail.com", "Password@1234");
+        User user = new User(ConfigLoader.getInstance().getUsername(), ConfigLoader.getInstance().getPassword());
 
         System.out.println("Start >> Homepage");
         HomePage homePage = new HomePage(getDriver());
@@ -104,6 +105,8 @@ public class MyFirstTestCase extends BaseTest {
         checkoutPage.placeOrder();
         Assert.assertEquals(checkoutPage.getSuccessNotice(), "Thank you. Your order has been received.");
 
+
+        
     }
 
 }
