@@ -1,5 +1,7 @@
 package org.selenium.pom.utils;
 
+import org.selenium.pom.constants.EnvType;
+
 import java.util.Properties;
 
 public class ConfigLoader {
@@ -13,7 +15,17 @@ public class ConfigLoader {
     //we don't want to any other class to create instance of this class
     //only this class should be able to create its own instance
     private ConfigLoader() {
-        properties = PropertyUtils.propertyLoader("src/test/resources/config.properties");
+        String env = System.getProperty("env", String.valueOf(EnvType.STAGING));
+        switch (EnvType.valueOf(env)) {
+            case STAGING:
+                properties = PropertyUtils.propertyLoader("src/test/resources/config_stg.properties");
+                break;
+            case PRODUCTION:
+                properties = PropertyUtils.propertyLoader("src/test/resources/config_prod.properties");
+                break;
+            default:
+                throw new IllegalStateException("Invalid env type: " +env);
+        }
     }
 
     //configLoader next call will not be null (static - can change value)
@@ -34,7 +46,7 @@ public class ConfigLoader {
         if(prop != null)
             return prop;
         else
-            throw new RuntimeException("Property baseUrl is not specified in the config.properties file ");
+            throw new RuntimeException("Property baseUrl is not specified in the config_stg.properties file ");
     }
 
     public String getUsername() {
@@ -42,7 +54,7 @@ public class ConfigLoader {
         if(prop != null)
             return prop;
         else
-            throw new RuntimeException("Property username is not specified in the config.properties file ");
+            throw new RuntimeException("Property username is not specified in the config_stg.properties file ");
     }
 
     public String getPassword() {
@@ -50,7 +62,7 @@ public class ConfigLoader {
         if(prop != null)
             return prop;
         else
-            throw new RuntimeException("Property property is not specified in the config.properties file ");
+            throw new RuntimeException("Property property is not specified in the config_stg.properties file ");
     }
 
 }
