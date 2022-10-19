@@ -27,13 +27,18 @@ public class StorePage extends BasePage {
 //        return this;
 //    }
 
-    private void clickSearchBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(searchBtn)).click();
+    public StorePage load() {
+        load("/store");
+        return this;
     }
 
     public void search(String text) {
         enterTextInSearchFld(text);
         clickSearchBtn();
+    }
+
+    private void clickSearchBtn() {
+        wait.until(ExpectedConditions.elementToBeClickable(searchBtn)).click();
     }
 
     public String getTitle() {
@@ -51,6 +56,10 @@ public class StorePage extends BasePage {
 
     public void clickViewCart() {
         wait.until(ExpectedConditions.elementToBeClickable(viewCartLink)).click();
+    }
+
+    public void waitSearchPageLoaded() {
+        wait.until(ExpectedConditions.urlContains("&post_type=product"));
     }
 
 
