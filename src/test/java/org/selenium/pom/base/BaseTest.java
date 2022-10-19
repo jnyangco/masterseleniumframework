@@ -33,7 +33,8 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public void quitDriver() {
+    public void quitDriver() throws InterruptedException {
+        Thread.sleep(2000);
         //driver.quit();
         System.out.println("CURRENT THREAD: " +Thread.currentThread().getId() +", " +"DRIVER = " +getDriver());
         getDriver().quit();

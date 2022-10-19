@@ -45,8 +45,8 @@ public class MyFirstTestCase extends BaseTest {
         StorePage storePage = homePage.navigateToStoreUsingMenu();
         storePage.search(searchFor);
         Thread.sleep(2000);
-        //Assert.assertEquals(storePage.getTitle(), "Search results: “" + searchFor + "”");
-        Assert.assertTrue(storePage.getTitle().contains("Search results: "));
+        Assert.assertEquals(storePage.getTitle(), "Search results: “" + searchFor + "”");
+        //Assert.assertTrue(storePage.getTitle().contains("Search results: "));
         storePage.clickAddToCartBtn(product.getName());
         storePage.clickViewCart();
 
@@ -86,8 +86,8 @@ public class MyFirstTestCase extends BaseTest {
         StorePage storePage = homePage.navigateToStoreUsingMenu();
         storePage.search(searchFor);
         Thread.sleep(2000);
-        //Assert.assertEquals(storePage.getTitle(), "Search results: “" + searchFor + "”");
-        Assert.assertTrue(storePage.getTitle().contains("Search results: "));
+        Assert.assertEquals(storePage.getTitle(), "Search results: “" + searchFor + "”");
+        //Assert.assertTrue(storePage.getTitle().contains("Search results: "));
         storePage.clickAddToCartBtn(product.getName());
         storePage.clickViewCart();
 
