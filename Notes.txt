@@ -57,3 +57,5 @@ git config --global user.email
 Git Ignore
 command -> git update-index --assume-unchanged src/file/to/ignore
 undo -> git update-index --no-assume-unchanged src/file/to/ignore
+
+---------------------------------------------------------------------------------
