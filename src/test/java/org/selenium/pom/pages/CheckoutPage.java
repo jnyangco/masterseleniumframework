@@ -32,14 +32,19 @@ public class CheckoutPage extends BasePage {
     By alternateCountryDropdown = By.id("select2-billing_country-container");
     By alternateStateDropdown = By.id("select2-billing_state-container");
 
-
     private final By directBankTransferRadioBtn = By.id("payment_method_bacs");
+    private final By productName = By.cssSelector("td.product-name");
 
 
 
 
     public CheckoutPage(WebDriver driver) {
         super(driver);
+    }
+
+    public void load() {
+        load("/checkout/");
+        //return this;
     }
 
     public void enterFirstName(String text) {
@@ -150,6 +155,10 @@ public class CheckoutPage extends BasePage {
         if(!element.isSelected()) {
             element.click();
         }
+    }
+
+    public String getProductName() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(productName)).getText();
     }
 
 }

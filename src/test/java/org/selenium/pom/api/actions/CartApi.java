@@ -31,7 +31,7 @@ public class CartApi {
 
     //this is Post Call
     public Response addToCart(int productId, int quantity) {
-        Cookies cookies = new Cookies();
+        //Cookies cookies = new Cookies();
         Header header = new Header("content-type", "application/x-www-form-urlencoded");
         Headers headers = new Headers(header);
         HashMap<String, Object> formParams = new HashMap<>();
