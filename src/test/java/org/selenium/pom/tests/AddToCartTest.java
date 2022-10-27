@@ -21,6 +21,6 @@ public class AddToCartTest extends BaseTest {
 
         CartPage cartPage = new CartPage(getDriver());
         Assert.assertEquals(cartPage.getProductName(), product.getName());
-
     }
+    
 }

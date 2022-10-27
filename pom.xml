@@ -99,13 +99,13 @@
                 <configuration>
 
                     <!--Maven Run Parallel without testng.xml -->
-<!--                    <parallel>methods</parallel>-->
-<!--                    <threadCount>2</threadCount>-->
+                    <parallel>methods</parallel>
+                    <threadCount>6</threadCount>
 
                     <!--Maven Run pointing to testng.xml -->
-                    <suiteXmlFiles>
-                        <suiteXmlFile>testng_chrome.xml</suiteXmlFile>
-                    </suiteXmlFiles>
+<!--                    <suiteXmlFiles>-->
+<!--                        <suiteXmlFile>testng_chrome.xml</suiteXmlFile>-->
+<!--                    </suiteXmlFiles>-->
 
                     <!--Variables -->
 <!--                    <systemPropertyVariables>-->

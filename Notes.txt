@@ -1,4 +1,6 @@
+Run Maven with Browser Parameter
 
+mvn clean test -Dbrowser=CHROME
 ---------------------------------------------------------------------------------
 RUN Maven Command with multiple testng.xml
 <configuration>
@@ -59,3 +61,5 @@ command -> git update-index --assume-unchanged src/file/to/ignore
 undo -> git update-index --no-assume-unchanged src/file/to/ignore
 
 ---------------------------------------------------------------------------------
+Run > Edit Configurations
+add -Dbrowser=FIREFOX
