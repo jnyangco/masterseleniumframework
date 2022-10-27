@@ -49,7 +49,7 @@ public class BaseTest {
         //driver.quit();
         System.out.println("CURRENT THREAD: " +Thread.currentThread().getId() +", " +"DRIVER = " +getDriver());
 
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         getDriver().quit();
     }
 
