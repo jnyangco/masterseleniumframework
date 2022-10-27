@@ -8,6 +8,7 @@ import org.selenium.pom.base.BasePage;
 public class HomePage extends BasePage {
 
     private final By storeMenuLink = By.cssSelector("#menu-item-1227 > a");
+    private final By productBlueShoes = By.xpath("//h2[text()='Blue Shoes']");
 
     public HomePage(WebDriver driver) {
         super(driver); //passing this driver to the constructor of BasePage class
@@ -22,5 +23,9 @@ public class HomePage extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(storeMenuLink)).click();
         return new StorePage(driver);
 
+    }
+
+    public void navigateToProductPageBlueShoes() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(productBlueShoes)).click();
     }
 }

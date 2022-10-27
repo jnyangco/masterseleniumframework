@@ -63,4 +63,39 @@ public class CartApi {
         this.cookies = response.getDetailedCookies();
         return response;
     }
+
+    /*
+    public Response addToCartFromProductPage(int productId, int quantity) {
+        //Cookies cookies = new Cookies();
+        Header header = new Header("content-type", "application/x-www-form-urlencoded");
+        Headers headers = new Headers(header);
+        HashMap<String, Object> formParams = new HashMap<>();
+        formParams.put("add-to-cart", productId);
+        formParams.put("quantity", quantity);
+
+        if(cookies == null) {
+            cookies = new Cookies();
+        }
+
+        Response response = RestAssured.
+                given().
+                baseUri(ConfigLoader.getInstance().getBaseUrl()).
+                headers(headers).
+                formParams(formParams).
+                cookies(cookies).
+                log().all().
+                when().
+                post("/?wc-ajax=add_to_cart").
+                then().
+                log().all().
+                extract().
+                response();
+        if(response.getStatusCode() != 200) {
+            throw new RuntimeException("Failed to add product " +productId +"to the cart" +
+                    ", HTTP Status Code: " +response.getStatusCode());
+        }
+        this.cookies = response.getDetailedCookies();
+        return response;
+    }
+     */
 }

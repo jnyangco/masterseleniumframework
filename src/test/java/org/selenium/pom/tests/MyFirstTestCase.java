@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public class MyFirstTestCase extends BaseTest {
 
-    @Test
+//    @Test
     public void guestCheckoutUsingDirectBankTransfer() throws InterruptedException, IOException {
         System.out.println("============================================");
         /* BillingAddress billingAddress = new BillingAddress();
@@ -70,7 +70,7 @@ public class MyFirstTestCase extends BaseTest {
     }
 
 
-    @Test
+//    @Test
     public void loginAndCheckoutUsingDirectBankTransfer() throws InterruptedException, IOException {
         System.out.println("============================================");
         String searchFor = "Blue";

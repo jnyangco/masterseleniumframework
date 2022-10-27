@@ -12,6 +12,9 @@ public class StorePage extends BasePage {
     private final By title = By.xpath("//header[@class='woocommerce-products-header']/h1");
     private final By viewCartLink = By.xpath("//a[@title='View cart']");
 
+    private final By productBlueShoes = By.xpath("//h2[text()='Blue Shoes']");
+    private final By noProductsMessage = By.xpath("//p[@class='woocommerce-info']");
+
     public StorePage(WebDriver driver) {
         super(driver);
     }
@@ -62,5 +65,11 @@ public class StorePage extends BasePage {
         wait.until(ExpectedConditions.urlContains("&post_type=product"));
     }
 
+    public void navigateToProductPageBlueShoes() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(productBlueShoes)).click();
+    }
 
+    public String getNoProductsMessage() {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(noProductsMessage)).getText();
+    }
 }
