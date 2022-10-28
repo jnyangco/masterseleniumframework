@@ -29,11 +29,9 @@ public class BaseTest {
         browser = System.getProperty("browser", browser);
 
         //Use this line if running pom.xml, or direct testng run in class
-        /*
-        if(browser == null) {
-            browser = "CHROME";
-        }
-        */
+//        if(browser == null) {
+//            browser = "CHROME";
+//        }
 
         //1-maven, 2-testng (if maven=null) then get from testng.xml, 3-from config file (so you can run by right-clicking on method name)
         //Usage: 1-maven only -> CICD, 2-testng.xml only, 3-maven with testng.xml
@@ -49,7 +47,7 @@ public class BaseTest {
         //driver.quit();
         System.out.println("CURRENT THREAD: " +Thread.currentThread().getId() +", " +"DRIVER = " +getDriver());
 
-        Thread.sleep(3000);
+//        Thread.sleep(3000);
         getDriver().quit();
     }
 
