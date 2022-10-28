@@ -20,8 +20,8 @@ public class AddToCartTest extends BaseTest {
         Product product = new Product(1215);
 
         StorePage storePage = new StorePage(getDriver()).load();
-        storePage.clickAddToCartBtn(product.getName());
-        storePage.clickViewCart();
+        storePage.getProductThumbnail().clickAddToCartBtn(product.getName());
+        storePage.getProductThumbnail().clickViewCart();
 
         CartPage cartPage = new CartPage(getDriver());
         Assert.assertEquals(cartPage.getProductName(), product.getName());
@@ -31,8 +31,8 @@ public class AddToCartTest extends BaseTest {
     public void addToCartFeaturedProducts(Product product) {
         HomePage homePage = new HomePage(getDriver());
         homePage.load();
-        homePage.clickAddToCartBtn(product.getName());
-        homePage.clickViewCart();
+        homePage.getProductThumbnail().clickAddToCartBtn(product.getName());
+        homePage.getProductThumbnail().clickViewCart();
 
         CartPage cartPage = new CartPage(getDriver());
         Assert.assertEquals(cartPage.getProductName(), product.getName());

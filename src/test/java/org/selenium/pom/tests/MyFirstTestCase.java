@@ -17,7 +17,7 @@ import java.io.IOException;
 
 public class MyFirstTestCase extends BaseTest {
 
-//    @Test
+    @Test
     public void guestCheckoutUsingDirectBankTransfer() throws InterruptedException, IOException {
         System.out.println("============================================");
         /* BillingAddress billingAddress = new BillingAddress();
@@ -42,13 +42,13 @@ public class MyFirstTestCase extends BaseTest {
         //we do not need to create an instance of the StorePage (i.e: StorePage storePage = new StorePage(driver);)
 
         System.out.println("Start >> StorePage");
-        StorePage storePage = homePage.navigateToStoreUsingMenu();
+        StorePage storePage = homePage.getMyHeader().navigateToStoreUsingMenu();
         storePage.search(searchFor);
         Thread.sleep(2000);
         Assert.assertEquals(storePage.getTitle(), "Search results: “" + searchFor + "”");
         //Assert.assertTrue(storePage.getTitle().contains("Search results: "));
-        storePage.clickAddToCartBtn(product.getName());
-        storePage.clickViewCart();
+        storePage.getProductThumbnail().clickAddToCartBtn(product.getName());
+        storePage.getProductThumbnail().clickViewCart();
 
         System.out.println("Start >> CartPage");
         CartPage cartPage = new CartPage(getDriver());
@@ -70,7 +70,7 @@ public class MyFirstTestCase extends BaseTest {
     }
 
 
-//    @Test
+    @Test
     public void loginAndCheckoutUsingDirectBankTransfer() throws InterruptedException, IOException {
         System.out.println("============================================");
         String searchFor = "Blue";
@@ -83,13 +83,13 @@ public class MyFirstTestCase extends BaseTest {
         homePage.load();
 
         System.out.println("Start >> StorePage");
-        StorePage storePage = homePage.navigateToStoreUsingMenu();
+        StorePage storePage = homePage.getMyHeader().navigateToStoreUsingMenu();
         storePage.search(searchFor);
         Thread.sleep(2000);
         Assert.assertEquals(storePage.getTitle(), "Search results: “" + searchFor + "”");
         //Assert.assertTrue(storePage.getTitle().contains("Search results: "));
-        storePage.clickAddToCartBtn(product.getName());
-        storePage.clickViewCart();
+        storePage.getProductThumbnail().clickAddToCartBtn(product.getName());
+        storePage.getProductThumbnail().clickViewCart();
 
         System.out.println("Start >> CartPage");
         CartPage cartPage = new CartPage(getDriver());
