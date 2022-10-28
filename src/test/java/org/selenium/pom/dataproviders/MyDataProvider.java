@@ -12,7 +12,7 @@ public class MyDataProvider {
     private String name;
 
     //DATA PROVIDER
-    @DataProvider(name="getFeaturedProducts", parallel = false)
+    @DataProvider(name="getFeaturedProducts", parallel = true)
     public Object[] getFeaturedProducts() throws IOException {
 
         return JacksonUtils.deserializeJson("products.json", Product[].class);

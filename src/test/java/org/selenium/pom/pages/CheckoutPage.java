@@ -1,9 +1,6 @@
 package org.selenium.pom.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.selenium.pom.base.BasePage;
@@ -140,6 +137,11 @@ public class CheckoutPage extends BasePage {
         wait.until(ExpectedConditions.visibilityOfElementLocated(passwordFld)).sendKeys(text);
     }
 
+    //private: since i don't it to expose to the Test class, it has specific purpose
+    private void waitForLoginBtnToDisappear() {
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(loginBtn));
+    }
+
     public void clickLoginBtn() {
         wait.until(ExpectedConditions.elementToBeClickable(loginBtn)).click();
     }
@@ -148,6 +150,7 @@ public class CheckoutPage extends BasePage {
         enterUsername(user.getUsername());
         enterPassword(user.getPassword());
         clickLoginBtn();
+        waitForLoginBtnToDisappear();
     }
 
     public void selectDirectBankTransfer() {
@@ -157,8 +160,23 @@ public class CheckoutPage extends BasePage {
         }
     }
 
-    public String getProductName() {
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(productName)).getText();
+//    public String getProductName() {
+//        return wait.until(ExpectedConditions.visibilityOfElementLocated(productName)).getText();
+//    }
+
+    //Note: we can implement this to fix stale element (while running in parallel)
+    public String getProductName() throws Exception {
+        int i = 5;
+        while(i > 0){
+            try {
+                return wait.until(ExpectedConditions.visibilityOfElementLocated(productName)).getText();
+            }catch (StaleElementReferenceException e){
+                System.out.println("NOT FOUND. TRYING AGAIN" + e);
+            }
+            Thread.sleep(5000);
+            i--;
+        }
+        throw new Exception("Element not found");
     }
 
 }

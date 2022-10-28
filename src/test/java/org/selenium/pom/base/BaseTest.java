@@ -22,16 +22,17 @@ public class BaseTest {
         return this.driver.get();
     }
 
+    //note: synchronized will run the method in sequence (in 1 test - java class)
     @Parameters("browser")
     @BeforeMethod
-    public void startDriver(@Optional String browser) {
+    public synchronized void startDriver(@Optional String browser) {
         //Use this line if running testng.xml with browser parameter
-        browser = System.getProperty("browser", browser);
+//        browser = System.getProperty("browser", browser);
 
         //Use this line if running pom.xml, or direct testng run in class
-//        if(browser == null) {
-//            browser = "CHROME";
-//        }
+        if(browser == null) {
+            browser = "CHROME";
+        }
 
         //1-maven, 2-testng (if maven=null) then get from testng.xml, 3-from config file (so you can run by right-clicking on method name)
         //Usage: 1-maven only -> CICD, 2-testng.xml only, 3-maven with testng.xml
@@ -42,8 +43,8 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public void quitDriver() throws InterruptedException {
-        Thread.sleep(2000);
+    public synchronized void quitDriver() throws InterruptedException {
+        Thread.sleep(300);
         //driver.quit();
         System.out.println("CURRENT THREAD: " +Thread.currentThread().getId() +", " +"DRIVER = " +getDriver());
 

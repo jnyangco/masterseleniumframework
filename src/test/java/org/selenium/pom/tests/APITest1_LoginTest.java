@@ -15,7 +15,7 @@ import java.io.IOException;
 public class APITest1_LoginTest extends BaseTest {
 
     @Test
-    public void loginDuringCheckout() throws IOException, InterruptedException {
+    public void loginDuringCheckout() throws Exception {
         String username = "demouser" + new FakerUtils().generateRandomNumber();
         User user = new User();
         user.setUsername(username);
