@@ -15,5 +15,8 @@ public class SearchTest extends BaseTest {
         storePage.search(searchFor);
         storePage.waitSearchPageLoaded();
         Assert.assertEquals(storePage.getTitle(), "Search results: “" + searchFor + "”");
+
+        //Test
     }
+
 }

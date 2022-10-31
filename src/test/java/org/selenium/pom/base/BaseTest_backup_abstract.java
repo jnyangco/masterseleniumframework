@@ -4,25 +4,37 @@ import io.restassured.http.Cookies;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.selenium.pom.constants.DriverType;
-import org.selenium.pom.factory.DriverManagerFactory;
 import org.selenium.pom.factory.abstractFactory.DriverManagerAbstract;
 import org.selenium.pom.factory.abstractFactory.DriverManagerFactoryAbstract;
 import org.selenium.pom.utils.CookieUtils;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import java.util.List;
 
-public class BaseTest {
+public class BaseTest_backup_abstract {
     //protected WebDriver driver;
     private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    //abstract
+    private ThreadLocal<DriverManagerAbstract> driverManager = new ThreadLocal<>();
 
     //Getter and Setter
     private void setDriver(WebDriver driver) {
         this.driver.set(driver);
     }
+    //abstract
+    private void setDriverManager(DriverManagerAbstract driverManager) {
+        this.driverManager.set(driverManager);
+    }
 
     protected WebDriver getDriver() {
         return this.driver.get();
+    }
+    //abstract
+    protected DriverManagerAbstract getDriverManager() {
+        return this.driverManager.get();
     }
 
     //note: synchronized will run the method in sequence (in 1 test - java class)
@@ -49,8 +61,16 @@ public class BaseTest {
         //also, someone can work on ChromeDriverManager (solo class) which will minimize the code conflict
 
         //User this when using DriverManagerFactory (implements)
-        setDriver(DriverManagerFactory.getManager(DriverType.valueOf(browser)).createDriver());
+        //setDriver(DriverManagerFactory.getManager(DriverType.valueOf(browser)).createDriver());
 
+        //User this when using DriverManagerFactoryAbstract (extends abstract class)
+        //abstract
+        setDriverManager(DriverManagerFactoryAbstract.getManager(DriverType.valueOf(browser)));
+        setDriver(getDriverManager().getDriver());
+
+        //
+        //System.out.println("CURRENT THREAD: " +Thread.currentThread().getId() +", " +"DRIVER = " +getDriver());
+        //abstract
         System.out.println("CURRENT THREAD: " +Thread.currentThread().getId() +", " +"DRIVER = " +getDriver());
     }
 
