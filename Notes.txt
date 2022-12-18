@@ -63,3 +63,13 @@ undo -> git update-index --no-assume-unchanged src/file/to/ignore
 ---------------------------------------------------------------------------------
 Run > Edit Configurations
 add -Dbrowser=FIREFOX
+
+
+---------------------------------------------------------------------------------
+Screenshot (whole page)
+https://github.com/pazone/ashot
+<dependency>
+    <groupId>ru.yandex.qatools.ashot</groupId>
+    <artifactId>ashot</artifactId>
+    <version>1.5.4</version>
+</dependency>
