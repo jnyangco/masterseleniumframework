@@ -1,5 +1,6 @@
 package org.selenium.pom.tests;
 
+import io.qameta.allure.Description;
 import org.selenium.pom.base.BaseTest;
 import org.selenium.pom.objects.BillingAddress;
 import org.selenium.pom.objects.User;
@@ -17,7 +18,8 @@ import java.io.IOException;
 
 public class MyFirstTestCase extends BaseTest {
 
-    @Test
+    @Description("This is the Test Case 1 Description")
+    @Test(description = "Test Case 1")
     public void guestCheckoutUsingDirectBankTransfer() throws InterruptedException, IOException {
         System.out.println("============================================");
         /* BillingAddress billingAddress = new BillingAddress();
@@ -69,8 +71,8 @@ public class MyFirstTestCase extends BaseTest {
         Assert.assertEquals(checkoutPage.getSuccessNotice(), "Thank you. Your order has been received.");
     }
 
-
-    @Test
+    @Description("This is the Test Case 2 Description")
+    @Test(description = "Test Case 2")
     public void loginAndCheckoutUsingDirectBankTransfer() throws InterruptedException, IOException {
         System.out.println("============================================");
         String searchFor = "Blue";

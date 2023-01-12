@@ -1,5 +1,6 @@
 package org.selenium.pom.tests;
 
+import io.qameta.allure.*;
 import org.selenium.pom.base.BaseTest;
 import org.selenium.pom.dataproviders.MyDataProvider;
 import org.selenium.pom.objects.Product;
@@ -13,9 +14,16 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
+@Epic("Epic Test 1")
+@Feature("Feature Test 1")
 public class AddToCartTest extends BaseTest {
 
-    @Test
+    @Story("Story Test 1")
+    @Link("https://example.org")
+    @Link(name = "allure", type = "mylink")
+    @Issue("123")
+    @TmsLink("test-1")
+    @Test(description = "Test Case 1")
     public void addToCartFromStorePage() throws IOException {
         Product product = new Product(1215);
 
@@ -27,7 +35,7 @@ public class AddToCartTest extends BaseTest {
         Assert.assertEquals(cartPage.getProductName(), product.getName() + "TestFailedASDF");
     }
 
-    @Test(dataProvider = "getFeaturedProducts", dataProviderClass = MyDataProvider.class)
+    @Test(dataProvider = "getFeaturedProducts", dataProviderClass = MyDataProvider.class, description = "Test Case 2")
     public void addToCartFeaturedProducts(Product product) {
         HomePage homePage = new HomePage(getDriver());
         homePage.load();

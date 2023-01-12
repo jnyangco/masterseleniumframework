@@ -73,3 +73,9 @@ https://github.com/pazone/ashot
     <artifactId>ashot</artifactId>
     <version>1.5.4</version>
 </dependency>
+
+---------------------------------------------------------------------------------
+docs.qameta.io/allure/#_testng
+Run > allure serve allure-results           => depends on folder name,
+Run > allure serve target/allure-results    => depends on folder name (i.e "target" folder)
+note: allure-results - is the folder name
