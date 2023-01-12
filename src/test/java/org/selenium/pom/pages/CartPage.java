@@ -1,5 +1,6 @@
 package org.selenium.pom.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,10 +20,12 @@ public class CartPage extends BasePage {
     @FindBy(xpath = "//td[@class='product-name']/a") private WebElement productName1;
     @FindBy(xpath = "//a[contains(@class,'checkout-button')]") @CacheLookup private WebElement checkoutBtn1;
 
+
     public CartPage(WebDriver driver) {
         super(driver);
     }
 
+    @Step("Test Step 3")
     public String getProductName() {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(productName)).getText();
         //return driver.findElement(productName).getText();

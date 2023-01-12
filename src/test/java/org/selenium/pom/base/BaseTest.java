@@ -39,12 +39,14 @@ public class BaseTest {
     @Parameters("browser")
     @BeforeMethod
     public synchronized void startDriver(@Optional String browser) {
-        //Use this line if running testng.xml with browser parameter
-        browser = System.getProperty("browser", browser);
-        //Use this line if running pom.xml, or direct testng run in class
-//        if(browser == null) {
-//            browser = "CHROME";
-//        }
+
+        /** Use this line if running testng.xml with browser parameter **/
+//        browser = System.getProperty("browser", browser);
+
+        /** Use this line if running pom.xml, or direct testng run in class **/
+        if(browser == null) {
+            browser = "CHROME";
+        }
 
 
 
